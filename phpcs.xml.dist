@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<ruleset name="MyFinances">
+    <!-- see https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset -->
+
+    <rule ref="PSR12">
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols" />
+    </rule>
+    <rule ref="Generic.PHP.RequireStrictTypes" />
+
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <!-- warning for line length above lineLimit -->
+            <property name="lineLimit" value="200"/>
+            <!-- error for line length above absoluteLineLimit -->
+            <property name="absoluteLineLimit" value="200"/>
+        </properties>
+    </rule>
+
+	<!--================================================================================-->
+	<!-- Slevomat -->
+
+    <!--    ===================================== -->
+    <!--    Exclude sniffs you don't want to run -->
+    <!--            https://github.com/slevomat/coding-standard/tree/master#exclude-sniffs-you-dont-want-to-run -->
+    <!-- -->
+    <rule ref="./vendor/slevomat/coding-standard/SlevomatCodingStandard/ruleset.xml"><!-- path to your ruleset.xml relative to project root -->
+        <!--    ===================================== -->
+        <!--    Sniffs to exclude -->
+        <!-- -->
+        <exclude name="SlevomatCodingStandard.Arrays.AlphabeticallySortedByKeys.IncorrectKeyOrder" />
+        <exclude name="SlevomatCodingStandard.Classes.ClassLength.ClassTooLong" />
+        <exclude name="SlevomatCodingStandard.Classes.ClassStructure.IncorrectGroupOrder" />
+        <exclude name="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion.DisallowedConstructorPropertyPromotion" />
+        <exclude name="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces.NoEmptyLineAfterOpeningBrace" />
+        <exclude name="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces.NoEmptyLineBeforeClosingBrace" />
+        <exclude name="SlevomatCodingStandard.Classes.ForbiddenPublicProperty.ForbiddenPublicProperty" />
+        <exclude name="SlevomatCodingStandard.Classes.ModernClassNameReference.ClassNameReferencedViaMagicConstant" />
+        <exclude name="SlevomatCodingStandard.Classes.RequireConstructorPropertyPromotion.RequiredConstructorPropertyPromotion" />
+        <exclude name="SlevomatCodingStandard.Classes.RequireMultiLineMethodSignature.RequiredMultiLineSignature" />
+        <exclude name="SlevomatCodingStandard.Classes.RequireSelfReference.RequiredSelfReference" />
+        <exclude name="SlevomatCodingStandard.Classes.RequireSingleLineMethodSignature.RequiredSingleLineSignature" />
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming.SuperfluousSuffix" />
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming.SuperfluousSuffix" />
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousTraitNaming.SuperfluousSuffix" />
+        <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountAfterLastUse" />
+        <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountBeforeFirstUse" />
+        <exclude name="SlevomatCodingStandard.Commenting.DisallowCommentAfterCode.DisallowedCommentAfterCode" />
+        <exclude name="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment.OneLinePropertyComment" />
+        <exclude name="SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectLinesCountBetweenDifferentAnnotationsTypes" />
+        <exclude name="SlevomatCodingStandard.Commenting.RequireOneLineDocComment.MultiLineDocComment" />
+        <exclude name="SlevomatCodingStandard.Commenting.UselessInheritDocComment.UselessInheritDocComment" />
+        <exclude name="SlevomatCodingStandard.Complexity.Cognitive.ComplexityTooHigh" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.AssignmentInCondition.AssignmentInCondition" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing.IncorrectLinesCountAfterControlStructure" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing.IncorrectLinesCountBeforeControlStructure" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.DisallowNullSafeObjectOperator.DisallowedNullSafeObjectOperator" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.DisallowTrailingMultiLineTernaryOperator.TrailingMultiLineTernaryOperatorUsed" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.EarlyExit" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.EarlyExit.EarlyExitNotUsed" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing.IncorrectLinesCountAfterControlStructure" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing.IncorrectLinesCountBeforeControlStructure" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses.UselessParentheses" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.RequireMultiLineCondition.RequiredMultiLineCondition" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.RequireMultiLineTernaryOperator.MultiLineTernaryOperatorNotUsed" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.RequireTernaryOperator.TernaryOperatorNotUsed" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.RequireYodaComparison.RequiredYodaComparison" />
+        <exclude name="SlevomatCodingStandard.Exceptions.DisallowNonCapturingCatch.DisallowedNonCapturingCatch" />
+        <exclude name="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly.ReferencedGeneralException" />
+        <exclude name="SlevomatCodingStandard.Files.FileLength.FileTooLong" />
+        <exclude name="SlevomatCodingStandard.Files.FunctionLength.FunctionLength" />
+        <exclude name="SlevomatCodingStandard.Files.LineLength.LineTooLong" />
+        <exclude name="SlevomatCodingStandard.Files.TypeNameMatchesFileName.NoMatchBetweenTypeNameAndFileName" />
+        <exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction.DisallowedArrowFunction" />
+        <exclude name="SlevomatCodingStandard.Functions.DisallowNamedArguments.DisallowedNamedArgument" />
+        <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall.DisallowedTrailingComma" />
+        <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInDeclaration.DisallowedTrailingComma" />
+        <exclude name="SlevomatCodingStandard.Functions.FunctionLength.FunctionLength" />
+        <exclude name="SlevomatCodingStandard.Functions.RequireMultiLineCall.RequiredMultiLineCall" />
+        <exclude name="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall.MissingTrailingComma" />
+        <exclude name="SlevomatCodingStandard.Functions.UnusedParameter.UnusedParameter" />
+        <exclude name="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses.IncorrectlyOrderedUses" />
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation.NonFullyQualifiedClassName" />
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions.NonFullyQualifiedException" />
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants.NonFullyQualified" />
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions.NonFullyQualified" />
+        <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedName" />
+        <exclude name="SlevomatCodingStandard.Namespaces.UseOnlyWhitelistedNamespaces.NonFullyQualified" />
+        <exclude name="SlevomatCodingStandard.Namespaces.UseSpacing.IncorrectLinesCountBetweenDifferentTypeOfUse" />
+        <exclude name="SlevomatCodingStandard.Numbers.DisallowNumericLiteralSeparator.DisallowedNumericLiteralSeparator" />
+        <exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators.DisallowedPostIncrementOperator" />
+        <exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators.DisallowedPreDecrementOperator" />
+        <exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators.DisallowedPreIncrementOperator" />
+        <exclude name="SlevomatCodingStandard.Operators.RequireOnlyStandaloneIncrementAndDecrementOperators.PostIncrementOperatorNotUsedStandalone" />
+        <exclude name="SlevomatCodingStandard.PHP.DisallowReference.DisallowedAssigningByReference" />
+        <exclude name="SlevomatCodingStandard.PHP.DisallowReference.DisallowedInheritingVariableByReference" />
+        <exclude name="SlevomatCodingStandard.PHP.DisallowReference.DisallowedPassingByReference" />
+        <exclude name="SlevomatCodingStandard.PHP.DisallowReference.DisallowedReturningReference" />
+        <exclude name="SlevomatCodingStandard.PHP.ReferenceSpacing.IncorrectSpacesAfterReference" />
+        <exclude name="SlevomatCodingStandard.PHP.UselessParentheses.UselessParentheses" />
+        <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.IncorrectStrictTypesFormat" />
+        <exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax.DisallowedArrayTypeHintSyntax" />
+        <exclude name="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint.DisallowedMixedTypeHint" />
+        <exclude name="SlevomatCodingStandard.TypeHints.NullTypeHintOnLastPosition.NullTypeHintNotOnLastPosition" />
+        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation" />
+        <exclude name="SlevomatCodingStandard.Variables.UnusedVariable.UnusedVariable" />
+        <exclude name="SlevomatCodingStandard.Whitespaces.DuplicateSpaces.DuplicateSpaces" />
+        <!--        <exclude name="XYZ" />-->
+        <!--        <exclude name="XYZ" />-->
+        <!--        <exclude name="XYZ" />-->
+    </rule>
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
+
+    <!--    ===================================== -->
+    <!--    Choose which sniffs to run -->
+    <!--            https://github.com/slevomat/coding-standard/tree/master#choose-which-sniffs-to-run -->
+    <!-- -->
+<!--    <config name="installed_paths" value="../../slevomat/coding-standard"/>-->
+<!--	&lt;!&ndash; https://github.com/slevomat/coding-standard/blob/master/doc/namespaces.md#slevomatcodingstandardnamespacesunuseduses- &ndash;&gt;-->
+<!--	<rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">-->
+<!--        <properties>-->
+<!--            &lt;!&ndash; searchAnnotations (defaults to false): enables searching for class names in annotations. &ndash;&gt;-->
+<!--            <property name="searchAnnotations" value="true"/>-->
+<!--        </properties>-->
+<!--    </rule>-->
+
+        <!-- other sniffs to include -->
+
+    <!-- Slevomat -->
+    <!--================================================================================-->
+
+    <!--================================================================================-->
+	<!-- Exclude -->
+
+    <exclude-pattern>*/tests/dummyFuncForTestsWithoutNamespace.php</exclude-pattern>
+
+    <!-- Exclude -->
+    <!--================================================================================-->
+</ruleset>

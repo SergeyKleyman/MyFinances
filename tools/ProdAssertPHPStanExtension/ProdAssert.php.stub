@@ -1,0 +1,18 @@
+<?php
+
+namespace MyFinances\Util\Assert;
+
+class ProdAssert
+{
+	/**
+	 * @param mixed $array
+	 * @param string $message
+	 */
+	public static function isMap($array, $message = ''): void;
+
+	/**
+	 * @param mixed $array
+	 * @param string $message
+	 */
+	public static function isNonEmptyMap($array, $message = ''): void;
+}

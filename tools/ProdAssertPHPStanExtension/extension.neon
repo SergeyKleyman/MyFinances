@@ -1,0 +1,9 @@
+parameters:
+	stubFiles:
+		- ProdAssert.php.stub
+
+services:
+	-
+		class: MyFinancesTools\ProdAssertPHPStanExtension\ProdAssertTypeSpecifyingExtension
+		tags:
+			- phpstan.typeSpecifier.staticMethodTypeSpecifyingExtension

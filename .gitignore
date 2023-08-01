@@ -10,9 +10,6 @@
 # Visual Studio Code
 .vscode/
 
-# Generated files
-_GENERATED/
-
 # Composer
 composer.lock
 composer.phar
@@ -27,3 +24,11 @@ vendor/
 phpunit.xml
 .phpunit.result.cache
 
+# Generated files
+_GENERATED/
+
+# Temporary files
+_TEMP/
+
+# Local files
+z_local*

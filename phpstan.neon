@@ -1,0 +1,13 @@
+includes:
+    - ./vendor/phpstan/phpstan-phpunit/extension.neon
+# // TODO: Sergey Kleyman: Enabled ProdAssertPHPStanExtension
+#    - ./tools/ProdAssertPHPStanExtension/extension.neon
+
+parameters:
+    bootstrapFiles:
+        - ./tests/bootstrap.php
+
+    reportUnmatchedIgnoredErrors: false
+
+    excludePaths:
+        - ./tests/dummyFuncForTestsWithoutNamespace.php
